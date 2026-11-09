@@ -43,3 +43,29 @@ if (form && feedback) {
     });
 
 }
+
+/* =====================================
+   ACESSIBILIDADE
+===================================== */
+
+/* Destaque para navegação pelo teclado */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #b5a5ff;
+    outline-offset: 4px;
+}
+
+/* Evita animações excessivas para quem prefere movimento reduzido */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
